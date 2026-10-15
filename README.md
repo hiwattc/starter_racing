@@ -5,6 +5,16 @@
 
 **▶ 바로 플레이: https://hiwattc.github.io/starter_racing/**
 
+## 스크린샷
+
+| 코스 선택 | 레이스 (포레스트 서킷) |
+| --- | --- |
+| ![코스 선택 화면](docs/screenshots/menu.jpg) | ![포레스트 서킷 레이스](docs/screenshots/forest.jpg) |
+| **선셋 스피드웨이** – 오일 아이템, 터보 | **트와일라잇 캐년** – 터보 화염, 아이템 박스 |
+| ![선셋 스피드웨이](docs/screenshots/speedway.jpg) | ![트와일라잇 캐년](docs/screenshots/canyon.jpg) |
+| **혼전** – 실드, 아이템 박스, 몸싸움 | **결과 화면** |
+| ![실드와 아이템 박스](docs/screenshots/items.jpg) | ![결과 화면](docs/screenshots/results.jpg) |
+
 ## 실행
 
 ES 모듈이므로 로컬 서버가 필요합니다.
