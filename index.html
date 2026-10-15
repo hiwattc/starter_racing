@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Kart Rush</title>
+	<link rel="icon" href="data:,">
+	<link rel="stylesheet" href="css/hud.css">
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+			"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/",
+			"crashcat": "https://esm.sh/crashcat@0.0.3"
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="hud" class="hidden">
+		<div id="speedlines"></div>
+
+		<div id="race-info" class="panel">
+			<div class="pos"><span id="pos-num">1</span><span id="pos-suffix">st</span><span class="pos-total">/ <span id="pos-total">11</span></span></div>
+			<div class="row"><span class="label">LAP</span><span id="lap">1 / 3</span></div>
+			<div class="row"><span class="label">TIME</span><span id="time">0:00.00</span></div>
+			<div class="row small"><span class="label">BEST LAP</span><span id="best">-</span></div>
+		</div>
+
+		<div id="item-box" class="panel">
+			<div id="item-icon"></div>
+			<div id="item-name">아이템 없음</div>
+			<div class="key">SPACE</div>
+		</div>
+
+		<ol id="standings" class="panel"></ol>
+
+		<div id="dash" class="panel">
+			<div class="speed"><span id="speed">0</span><span class="unit">km/h</span></div>
+			<div class="turbo">
+				<div class="turbo-label"><span>TURBO</span><span class="key">SHIFT</span></div>
+				<div class="turbo-bar"><div id="turbo-fill"></div></div>
+			</div>
+		</div>
+
+		<canvas id="minimap" width="220" height="220"></canvas>
+
+		<div id="warning" class="hidden">⚠ 미사일 접근!</div>
+		<div id="center-msg"></div>
+		<div id="toasts"></div>
+	</div>
+
+	<div id="start-screen" class="overlay">
+		<div class="card">
+			<h1>KART <span>RUSH</span></h1>
+			<p class="sub">주인공 vs AI 10대 · 3랩 레이스</p>
+			<div id="course-picker"></div>
+			<div class="controls">
+				<div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / 방향키<span>주행</span></div>
+				<div><kbd>Shift</kbd><span>터보 (게이지 소모)</span></div>
+				<div><kbd>Space</kbd><span>아이템 사용</span></div>
+				<div><kbd>R</kbd><span>트랙으로 복귀</span></div>
+			</div>
+			<div class="items-legend">
+				<div>🔥 부스터</div><div>🛡️ 실드</div><div>🚀 유도 미사일</div><div>🛢️ 오일</div><div>⚡ 터보 충전</div>
+			</div>
+			<button id="start-btn" disabled>로딩 중…</button>
+		</div>
+	</div>
+
+	<div id="results" class="overlay hidden">
+		<div class="card">
+			<h2 id="results-title">레이스 종료</h2>
+			<table>
+				<thead><tr><th>#</th><th>드라이버</th><th>기록</th></tr></thead>
+				<tbody id="results-body"></tbody>
+			</table>
+			<div class="buttons">
+				<button id="restart-btn">다시 하기</button>
+				<button id="course-btn" class="secondary">코스 선택</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="module" src="js/main.js"></script>
+</body>
+</html>
