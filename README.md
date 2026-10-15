@@ -3,6 +3,8 @@
 주인공 1명 vs AI 10대가 3랩을 겨루는 three.js 레이싱 게임.
 [mrdoob/Starter-Kit-Racing](https://github.com/mrdoob/Starter-Kit-Racing) (MIT)의 차량 물리 · 트랙 · 사운드 · 카메라를 기반으로 확장했습니다.
 
+**▶ 바로 플레이: https://hiwattc.github.io/starter_racing/**
+
 ## 실행
 
 ES 모듈이므로 로컬 서버가 필요합니다.
